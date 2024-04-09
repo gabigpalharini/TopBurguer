@@ -13,15 +13,27 @@ return new class extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
+            $table->string('nome', 80)->nullable(false);
+            $table->string('telefone', 11)->nullable(false);
+            $table->string('cpf', 11)->nullable(false);
+            $table->string('endereco', 120)->nullable(false);
+            $table->string('email')->nullable(false);
+            $table->string('password')->nullable(false);
+            $table->string('foto')->nullable(false);
             $table->timestamps();
+
+    
         });
     }
 
     /**
      * Reverse the migrations.
      */
+  
+
     public function down(): void
     {
         Schema::dropIfExists('clientes');
     }
 };
+

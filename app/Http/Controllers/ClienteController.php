@@ -15,6 +15,7 @@ class ClienteController extends Controller
                 'nome' => $cliente->nome,
                 'telefone' =>$cliente->telefone,
                 'endereco' => $cliente->endereco,
+                'cpf' => $cliente->cpf,
                 'email' =>$cliente->preco,
                 'password' =>$cliente->password,
                 'foto' => asset('storage/' . $cliente->imagem)
